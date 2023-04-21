@@ -1,0 +1,163 @@
+
+:root {
+    --Dark_Color: rgb(33, 33, 33);
+    --Theme_Color:rgb(101, 31, 255);
+    }
+
+body{
+    display: flex;
+    background-color: var(--Dark_Color);
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Lucida Sans';
+    margin-left: 10px;
+    margin-right: 10px;
+}
+label{
+    font-size: 1.5em;
+}
+h1{
+    text-align: center;
+    font-size: 3em;
+}
+em{
+    text-align: center;
+    font-size: 2em;
+}
+#ParentContainer{
+    width: 100%;
+    display: flex;
+    background-color: var(--Dark_Color);
+    flex-direction: column;
+}
+
+#artist-view{
+width: calc(100% - 4px); 
+height: 350px;
+background-color: var(--Dark_Color);
+display: flex;
+flex-direction: column;
+border: 2px solid var(--Theme_Color);
+margin-bottom: 20px;
+}
+
+#Artista{
+    height: 350px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+#Artista img{
+    opacity: 0.5;
+    position:absolute;
+    object-fit: cover;
+    width: calc(100% - 22px);
+    height: 350px;
+}
+#Artista em{
+    display: block;
+    margin: 0px 0px 0px 0px;
+    font-family: 'Segoe UI';
+    font-size: 1.5em;
+    z-index: 1;
+}
+#Artista h2{
+    display: block;
+    margin: 0px 0px 0px 0px;
+    font-family: 'Segoe UI';
+    font-size: 4em;
+    z-index: 1;
+}
+
+#album-view{
+width: 100%;
+height: 500px;
+background-color: var(--Dark_Color);
+display: flex;
+flex-wrap: wrap;
+overflow: auto;
+margin-bottom: 20px;
+margin-top: 20px;
+border: 2px solid var(--Theme_Color);
+}
+
+
+.content{
+    color: black;
+    width: calc((100% / 3) - 40px);
+    height: auto;
+    background-color: rgb(66, 66, 66);
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 2px solid var(--Theme_Color);
+    border-radius: 12px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    max-height: 250px;
+}
+
+.left{
+    display: flex;
+    width: 150px;
+    height: 100%;
+    background-color: rgb(66, 66, 66);
+    margin-right: 10px;
+    align-items: center;
+}
+
+.content img{
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+.right{
+    color: white;
+    width: auto;
+    height: 100%;
+    background-color: rgb(66, 66, 66);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+.right h1{
+    overflow-wrap: break-word;
+    font-size: 1.6em;
+    display: block;
+    margin: 10px 0px 0px 0px;
+}
+
+.right em{
+    text-align: left;
+    font-size: 1.2em;
+    display: block;
+    margin: 10px 0px 0px 0px;
+}
+
+
+#ticket-view{
+    width: 100%;
+    height: auto;
+    background-color: var(--Dark_Color);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px solid var(--Theme_Color);
+    padding-bottom: 10px;
+}
+
+#content{
+    font-size: 1.2em;
+    border: 2px solid var(--Theme_Color);
+    border-radius: 50px;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0px 0px 8px rgba(255,255,255,0.5);
+}
