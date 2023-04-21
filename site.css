@@ -1,7 +1,9 @@
 
 :root {
     --Dark_Color: rgb(33, 33, 33);
-    --Theme_Color:rgb(101, 31, 255);
+    --Theme_Color:rgb(250, 250, 250);
+    --Light_Dark: rgb(40, 40, 40);
+    --Content_Color: rgb(48, 79, 254);
     }
 
 body{
@@ -38,10 +40,18 @@ height: 350px;
 background-color: var(--Dark_Color);
 display: flex;
 flex-direction: column;
-border: 2px solid var(--Theme_Color);
 margin-bottom: 20px;
+box-shadow: 0px 0px 5px rgba(255,255,255,0.5);
+border: 2px solid var(--Theme_Color);
+
 }
 
+.nonvisible{
+    display: none;
+}
+#artist-view.nonvisible{
+    display: none;
+}
 #Artista{
     height: 350px;
     background-color: transparent;
@@ -50,8 +60,11 @@ margin-bottom: 20px;
     align-items:center;
     justify-content: center;
 }
+#Artista.nonvisible{
+    display: none;
+}
 #Artista img{
-    opacity: 0.5;
+    opacity: 0.4;
     position:absolute;
     object-fit: cover;
     width: calc(100% - 22px);
@@ -81,16 +94,18 @@ flex-wrap: wrap;
 overflow: auto;
 margin-bottom: 20px;
 margin-top: 20px;
-box-shadow: 0px 0px 5px rgba(255,255,255,0.5);
 padding-bottom: 10px;
 }
-
-
+#album-view.nonvisible{
+    display: none;
+}
+a{
+    display: none;
+}
 .content{
-    color: black;
     width: calc((100% / 3) - 40px);
     height: auto;
-    background-color: rgb(66, 66, 66);
+    background-color: var(--Content_Color);
     margin-left: 10px;
     margin-top: 10px;
     border: 2px solid var(--Theme_Color);
@@ -98,13 +113,14 @@ padding-bottom: 10px;
     padding: 10px 10px 10px 10px;
     display: flex;
     max-height: 250px;
+    cursor: pointer;
 }
 
 .left{
     display: flex;
     width: 150px;
     height: 100%;
-    background-color: rgb(66, 66, 66);
+    background-color: var(--Content_Color);
     margin-right: 10px;
     align-items: center;
 }
@@ -113,13 +129,14 @@ padding-bottom: 10px;
     display: block;
     width: 150px;
     height: 150px;
+    border: 2px solid var(--Theme_Color);
 }
 
 .right{
     color: white;
     width: auto;
     height: 100%;
-    background-color: rgb(66, 66, 66);
+    background-color: var(--Content_Color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,16 +167,31 @@ padding-bottom: 10px;
     margin-top: 20px;
     padding-bottom: 10px;
     min-height: 100px;
-    box-shadow: 0px 0px 5px rgba(255,255,255,0.5);
 }
-
+#ticket-view.nonvisible{
+    display: none;
+}
 #content{
     font-size: 1.2em;
     border: 2px solid var(--Theme_Color);
     border-radius: 50px;
-    background-color: rgb(33, 33, 33);
+    background-color: var(--Dark_Color);
     color: white;
     height: 50px;
     padding: 10px;
-    box-shadow: 0px 0px 8px rgba(255,255,255,0.5);
+}
+#bottone{
+    color: white;
+    font-size: 1.2em;
+    height: 50px;
+    border: 2px solid var(--Theme_Color);
+    background-color: var(--Content_Color);
+    border-radius: 50px;
+    cursor: pointer;
+    width: 120px;
+}
+#bottone:hover{
+    color: black;
+    background-color: white;
+    border: none;
 }
